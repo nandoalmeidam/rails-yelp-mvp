@@ -1,0 +1,12 @@
+<!-- app/views/reviews/index.html.erb -->
+
+<div class="container">
+  <h1>All Reviews</h1>
+  <ul class="list-group">
+    <% @reviews.each do |review| %>
+      <li class="list-group-item">
+        <%= link_to review.content, review_path(review) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
